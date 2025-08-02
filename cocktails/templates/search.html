@@ -1,0 +1,13 @@
+<h3>Search Cocktails by Name or Ingredient(s)</h3>
+<form action="/search/" method="get">  
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+</form>
+{% if Cocktails %} 
+    <p>Result:</p>
+    {% for drink in cocktails %}
+        <img src="{{ drink.strDrinkThumb }}" alt="{{ drink.strDrink }}" width="100px" height="100px">{{ drink.strDrink }}
+    {% endfor %}
+{% elif form.is_bound %}
+    <p>No Cocktails found!!!!</p>
+{% endif %}

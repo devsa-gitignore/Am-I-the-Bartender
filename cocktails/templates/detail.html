@@ -1,0 +1,9 @@
+<h2>{{ name }}</h2>
+<p>Type: {{ alcoholic }}</p>
+<img src="{{ image }}" alt="{{ name }}" width="300">
+<h3>Instructions:</h3>
+<p>{{ instructions }}</p>
+<h3>Ingredients:</h3>
+{% for i in ingredients %}
+    <p>{{ i.ingredient }}: {{ i.measure }}</p>
+{% endfor %}

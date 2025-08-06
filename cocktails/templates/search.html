@@ -3,10 +3,12 @@
     {{ form.as_p }}
     <button type="submit">Search</button>
 </form>
-{% if Cocktails %} 
+{% if cocktails %} 
     <p>Result:</p>
     {% for drink in cocktails %}
+        <a href="{% url 'detail' drink.idDrink %}">
         <img src="{{ drink.strDrinkThumb }}" alt="{{ drink.strDrink }}" width="100px" height="100px">{{ drink.strDrink }}
+        </a>
     {% endfor %}
 {% elif form.is_bound %}
     <p>No Cocktails found!!!!</p>

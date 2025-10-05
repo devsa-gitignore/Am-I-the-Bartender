@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 from django.http import HttpResponse 
 from .forms import CocktailSearch
-from .models import Search
+
 # Create your views here.
 def cocktails(request):
     return HttpResponse("First Django")
@@ -19,7 +19,7 @@ def search(request):
         response2=requests.get(api2).json()
         if response2.get('drinks'):
             cocktails+=[d for d in response2['drinks'] if d not in cocktails]
-        
+
     return render(request,'search.html',{'form':form , 'cocktails':cocktails})
 def cocktaildet(request,cocktailid):
     api3=f"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i={cocktailid}"

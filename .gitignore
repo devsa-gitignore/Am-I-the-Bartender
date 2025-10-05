@@ -1,2 +1,30 @@
-db.sqlite3 
-db.sqlite3 
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+
+# Django stuff
+db.sqlite3
+/media/
+staticfiles/
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Build/distribution
+*.egg-info/
+dist/
+build/
+.eggs/

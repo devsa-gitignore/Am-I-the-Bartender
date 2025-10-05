@@ -22,5 +22,5 @@ urlpatterns = [
     path('',cocktails,name="coktails"),
     path('admin/', admin.site.urls),
     path('search/',search,name='cocktailsearch'),
-    path('<str:cocktailid>/',cocktaildet,name="detail")
+    path('<str:cocktailid>/',cocktaildet,name="detail"),
 ]

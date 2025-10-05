@@ -2,6 +2,7 @@ from django.shortcuts import render
 import requests
 from django.http import HttpResponse 
 from .forms import CocktailSearch
+from .models import Search
 # Create your views here.
 def cocktails(request):
     return HttpResponse("First Django")
